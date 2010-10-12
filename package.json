@@ -2,7 +2,8 @@
   "name":"slideshare-live",
   "version":"0.0.1",
   "dependencies":{
-    "express":"",
-    "socket.io":""
+      "express":""
+    , "socket.io":""
+    , "ejs":""
   }
 }
