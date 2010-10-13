@@ -1,5 +1,4 @@
 body {
-    background-color: #111;
     font-family: "Helvetica";
     overflow: hidden;
     margin: 0;
@@ -9,7 +8,23 @@ p {
     color: #999;
 }
 
-#map {
-
+#home {
+  text-align: center;
 }
 
+#home form{
+  position: absolute;
+  top: 250px;
+  width: 100%;
+}
+
+#home form label{
+  display: block;
+}
+
+#slideshow_url{
+  width: 660px;
+  margin: 10px 0;
+  height: 26px;
+  font: 17px;
+}

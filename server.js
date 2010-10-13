@@ -14,6 +14,10 @@ new SlideShareLive({
   , slideshare: {
       secret: 'LQabSfjq'
     , key: 'kfqB74Zi'
-    , apiURL: 'http://www.slideshare.net/api/2/'
+    , host: 'www.slideshare.net'
+    , path: '/api/2/'
+    , port: 80
+    , method: 'get_slideshow'
     }
+  , staticFilePath: __dirname + "/public"
 });
