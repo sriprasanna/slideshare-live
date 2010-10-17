@@ -12,6 +12,11 @@
 </head>
 <body>
   <div id="home">
+    <% if( error != null ){ %>
+      <p class="errorMessage">
+        <%= error %>
+      </p>
+    <% } %>
     <form action="/" method="post" accept-charset="utf-8">
       <label for="slideshow_url">Enter a Slideshow URL</label><input type="text" name="slideshow_url" value="" id="slideshow_url">
       <br />
