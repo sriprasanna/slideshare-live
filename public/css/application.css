@@ -71,3 +71,10 @@ body {
 #message input{
   width: 650px;
 }
+
+#githubBadge{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
