@@ -4,28 +4,18 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>SlideShare Live</title>
+	<title>About SlideShare Live app</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Sri Prasanna">
-	<!-- Date: 2010-10-12 -->
+	<!-- Date: 2010-10-17 -->
 	<link href="http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="/css/application.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-  <div id="home">
+  <div id="slideshow">
     <h1>SlideShare Live App</h1>
-    <% if( error != null ){ %>
-      <p class="errorMessage">
-        <%= error %>
-      </p>
-    <% } %>
-    <form action="/slideshow" method="post" accept-charset="utf-8">
-      <label for="slideshow_url">Enter a Slideshow URL</label><input type="text" name="slideshow_url" value="" id="slideshow_url">
-      <input type="hidden" name="token" value="<%= token %>" id="token">
-      <br />
-      <input type="submit" value="Continue &rarr;">
-    </form>
-    <a href="/about.html" title="More info on this app">More info on this app.</a>
+    <p>This is a POC app to show you can share your SlideShare presentation with your audiences in real time. When you change the change the slide it also changes audiences' slide.</p>
+    <p>This app runs on node.js and hosted on Heroku. Express JS is used for routing and Faye for Bayuex server.</p>
   </div>
   <a href="http://github.com/sriprasanna/slideshare-live">
     <img id="githubBadge" src="http://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub" />
