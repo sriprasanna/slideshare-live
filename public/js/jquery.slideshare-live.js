@@ -46,18 +46,30 @@ function SlideShareLiveClient () {
     }
   }
   
-  $('#prev').click(function() {
-    var slideNumber = parseInt(currentPage.val(), 10) - 1;
-    if (slideNumber >= 1) 
-      publishSlideNumber( slideNumber );
-    return false;
-  });
-  
-  $('#next').click(function() {
+  function nextSlide () {
     var slideNumber = parseInt(currentPage.val(), 10) + 1;
     if (slideNumber <= slidesCount) 
       publishSlideNumber( slideNumber );
     return false;
+  }
+  
+  function previousSlide () {
+    var slideNumber = parseInt(currentPage.val(), 10) - 1;
+    if (slideNumber >= 1) 
+      publishSlideNumber( slideNumber );
+    return false;
+  }
+  
+  $('#prev').click(previousSlide);
+  
+  $('#next').click(nextSlide);
+  
+  $(window).keyup(function(e) {
+    if (e.keyCode == 37) {
+      previousSlide();
+    }else if (e.keyCode == 39) {
+      nextSlide();
+    };
   });
   
   var message = $('#message');
