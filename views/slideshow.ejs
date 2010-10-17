@@ -4,18 +4,32 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title><%= title %></title>
+	<title><%= slideshowTitle %></title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Sri Prasanna">
 	<!-- Date: 2010-10-12 -->
+	<link href="http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="/css/application.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<script type="text/javascript" charset="utf-8">
-	 var slideshowEmbedURL = "<%= url %>";
+	 var slideshowEmbedURL = "<%= pptLocation %>"
+	   , slidesCount = parseInt("<%= slidesCount %>", 10)
+	   , slideLocation = "http://cdn.slidesharecdn.com/";
 	</script>
 </head>
 <body>
   <div id="slideshow">
     
+    <embed id="player" width="960" height="600">
+      
+    </embed>
+    
+    <div id="navigator">
+      <input type="button" name="prev" value="&larr;" id="prev">
+      <input type="button" name="next" value="&rarr;" id="next">
+      <input type="hidden" name="currentPage" value="0" id="currentPage">
+    </div>
   </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/jquery.slideshare-live.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
