@@ -18,8 +18,9 @@
         <%= error %>
       </p>
     <% } %>
-    <form action="/slideshow" method="get" accept-charset="utf-8">
+    <form action="/slideshow" method="post" accept-charset="utf-8">
       <label for="slideshow_url">Enter a Slideshow URL</label><input type="text" name="slideshow_url" value="" id="slideshow_url">
+      <input type="hidden" name="token" value="<%= token %>" id="token">
       <br />
       <input type="submit" value="Continue &rarr;">
     </form>

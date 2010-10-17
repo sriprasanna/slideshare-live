@@ -4,8 +4,6 @@ html{
 
 body {
     font-family: Verdana,"Lucida Grande","Helvetica Neue",Helvetica,sans-serif;
-    overflow: hidden;
-    margin: 0;
 }
 
 #home {
@@ -51,4 +49,25 @@ body {
 
 #navigator input{
   width: 200px;
+}
+
+#message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #DE9D7F;
+  color: #024769;
+  height: 25px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+#message a{
+  color: #024769;
+  text-decoration: none;
+}
+
+#message input{
+  width: 650px;
 }
