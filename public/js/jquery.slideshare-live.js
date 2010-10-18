@@ -5,8 +5,8 @@ function SlideShareLiveClient () {
   };
   
   var self = this
-    , player = $('#player')
-    , currentPage = $('#currentPage');;
+    , currentPage = $('#currentPage')
+    , playerContainer = $('#slideshow');
   this.init = function() {
     self.slidePubSubPath = "/slide_change" + '_' + slideshowId + '_' + token;
     self.setupBayeuxHandlers();
@@ -32,8 +32,12 @@ function SlideShareLiveClient () {
   }
   
   function setEmbedLocation (slideNumber) {
+    var player = $('#player')
+      , clone = player.clone();
     currentPage.val(slideNumber);
-    player.attr('src', generateURL(slideNumber));
+    player.remove();
+    clone.attr('src', generateURL(slideNumber));
+    playerContainer.prepend(clone);
   }
     
   function publishSlideNumber (slideNumber) {
